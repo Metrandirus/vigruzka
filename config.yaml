@@ -1,0 +1,26 @@
+# Настройка маппинга колонок и входного файла
+# Названия должны соответствовать колонкам у поставщика.
+sku_column: "Артикул"
+name_column: "Наименование"
+qty_column: "Остаток"
+price_column: "Цена"
+
+# Если Excel-файл имеет конкретный лист:
+sheet_name: null     # например: "Прайс", иначе null
+
+# Параметры CSV (если ваш фид — CSV, иначе игнорируется):
+delimiter: ","
+encoding: "utf-8"
+decimal: "."         # десятичный разделитель во входном файле: "." или ","
+
+# Какие колонки сохранить в выходной CSV (после переименования):
+# Итоговые ключи в файле будут: sku, name, qty, price
+keep_columns:
+  - sku
+  - name
+  - qty
+  - price
+
+# Пути для вывода:
+out_csv: "public/filtered_products.csv"
+out_json: "public/filtered_products.json"
